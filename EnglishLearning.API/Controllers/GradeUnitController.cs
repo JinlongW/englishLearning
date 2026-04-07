@@ -3,6 +3,7 @@ using EnglishLearning.Shared.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
+using System.Security.Claims;
 
 namespace EnglishLearning.API.Controllers;
 
@@ -57,5 +58,16 @@ public class GradeUnitController : ControllerBase
         var userId = GetCurrentUserId();
         var tree = await _gradeUnitService.GetGradeUnitTreeAsync(userId, cancellationToken);
         return Ok(Result.Ok(tree));
+    }
+
+    private Guid GetCurrentUserId()
+    {
+        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (Guid.TryParse(userIdClaim, out var userId))
+        {
+            return userId;
+        }
+
+        throw new UnauthorizedAccessException("User ID not found");
     }
 }
