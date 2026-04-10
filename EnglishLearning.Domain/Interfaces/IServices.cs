@@ -66,6 +66,16 @@ public interface IWordService
     /// 删除单词
     /// </summary>
     Task<bool> DeleteWordAsync(Guid wordId, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// 获取需要复习的单词列表（基于艾宾浩斯记忆曲线）
+    /// </summary>
+    Task<List<WordReviewDto>> GetWordsDueForReviewAsync(Guid userId, int limit = 20);
+
+    /// <summary>
+    /// 获取一周复习计划
+    /// </summary>
+    Task<List<ReviewScheduleDto>> GetReviewScheduleAsync(Guid userId);
 }
 
 /// <summary>
@@ -76,6 +86,11 @@ public interface IGrammarService
     Task<List<GrammarDto>> GetGrammarsAsync(Guid gradeUnitId, Guid userId);
     Task<GrammarDetailDto?> GetGrammarByIdAsync(Guid grammarId, Guid userId);
     Task<(int score, bool isPassed, int correctCount, int totalCount, int pointsEarned)> SubmitGrammarQuizAsync(Guid grammarId, Guid userId, List<QuizAnswerRequest> answers);
+
+    /// <summary>
+    /// 获取语法知识树形结构
+    /// </summary>
+    Task<List<GrammarTreeNode>> GetGrammarTreeAsync(Guid userId, int grade);
 }
 
 /// <summary>

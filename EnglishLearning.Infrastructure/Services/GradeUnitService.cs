@@ -2,16 +2,19 @@ using EnglishLearning.Domain.DTOs;
 using EnglishLearning.Domain.Interfaces;
 using EnglishLearning.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace EnglishLearning.Infrastructure.Services;
 
 public class GradeUnitService : IGradeUnitService
 {
     private readonly AppDbContext _context;
+    private readonly ILogger<GradeUnitService> _logger;
 
-    public GradeUnitService(AppDbContext context)
+    public GradeUnitService(AppDbContext context, ILogger<GradeUnitService> logger)
     {
         _context = context;
+        _logger = logger;
     }
 
     public async Task<List<int>> GetAllGradesAsync(CancellationToken cancellationToken = default)
@@ -47,21 +50,30 @@ public class GradeUnitService : IGradeUnitService
 
     public async Task<List<GradeTreeNode>> GetGradeUnitTreeAsync(Guid userId, CancellationToken cancellationToken = default)
     {
-        // 获取所有年级单元
+        _logger.LogInformation("GetGradeUnitTreeAsync called for userId: {UserId}", userId);
+
+        // 获取所有年级单元（不预加载 Words，使用投影查询）
         var allUnits = await _context.GradeUnits
             .OrderBy(g => g.Grade)
             .ThenBy(g => g.Semester)
             .ThenBy(g => g.UnitNo)
             .ToListAsync(cancellationToken);
 
-        // 按年级和学期分组
+        // 获取每个单元的单词总数
+        var unitWordCounts = await _context.Words
+            .GroupBy(w => w.GradeUnitId)
+            .ToDictionaryAsync(g => g.Key, g => g.Count(), cancellationToken);
+
+        _logger.LogInformation("Total units: {UnitCount}, unit word counts loaded for {WordCountUnits} units",
+            allUnits.Count, unitWordCounts.Count);
+
+        // 按年级分组
         var gradeTree = allUnits
-            .GroupBy(g => new { g.Grade, g.Semester })
+            .GroupBy(g => g.Grade)
             .Select(g => new GradeTreeNode
             {
-                Grade = g.Key.Grade,
-                Semester = g.Key.Semester,
-                Label = $"{g.Key.Grade} 年级 {g.Key.Semester}",
+                Grade = g.Key,
+                Label = $"{g.Key}年级",
                 Units = g.Select(u => new GradeUnitTreeNode
                 {
                     Id = u.Id,
@@ -69,25 +81,36 @@ public class GradeUnitService : IGradeUnitService
                     Grade = u.Grade,
                     Semester = u.Semester,
                     UnitNo = u.UnitNo,
-                    WordCount = u.Words.Count,
+                    WordCount = unitWordCounts.TryGetValue(u.Id, out var count) ? count : 0,
                     LearnedWordCount = 0,
                     Status = "not_started"
                 }).ToList()
             })
             .ToList();
 
-        // 获取用户的学习进度
+        _logger.LogInformation("Initial grade tree built with {GradeCount} grades", gradeTree.Count);
+
+        // 获取用户的学习进度 - 按 GradeUnitId 和 ContentId 分组，统计每个单元的不同单词数量
         var userProgress = await _context.LearningProgresses
             .Where(p => p.UserId == userId && p.ContentType == "word")
             .GroupBy(p => p.GradeUnitId)
             .Select(g => new
             {
                 GradeUnitId = g.Key,
-                LearnedCount = g.Count(p => p.Status == "completed"),
+                LearnedCount = g.Count(p => p.Status == "completed" || p.Status == "mastered"),
                 IsStarted = g.Any(p => p.Status != "not_started"),
-                IsCompleted = g.All(p => p.Status == "completed") && g.Count(p => p.Status == "completed") > 0
+                IsCompleted = g.All(p => p.Status == "completed" || p.Status == "mastered") && g.Count(p => p.Status == "completed" || p.Status == "mastered") > 0
             })
             .ToDictionaryAsync(x => x.GradeUnitId, x => x, cancellationToken);
+
+        _logger.LogInformation("User progress loaded for {ProgressCount} units", userProgress.Count);
+
+        // 日志：输出每个单元的进度详情
+        foreach (var progress in userProgress)
+        {
+            _logger.LogInformation("Unit {UnitId}: learned={Learned}, started={Started}, completed={Completed}",
+                progress.Key, progress.Value.LearnedCount, progress.Value.IsStarted, progress.Value.IsCompleted);
+        }
 
         // 填充学习进度信息
         foreach (var gradeNode in gradeTree)
@@ -102,6 +125,9 @@ public class GradeUnitService : IGradeUnitService
                         : progress.IsStarted
                             ? "in_progress"
                             : "not_started";
+
+                    _logger.LogInformation("Unit {UnitId} ({UnitName}): wordCount={WordCount}, learned={Learned}",
+                        unitNode.Id, unitNode.Label, unitNode.WordCount, unitNode.LearnedWordCount);
                 }
             }
         }

@@ -135,6 +135,8 @@ public class ChallengeQuestionResult
     public string UserAnswer { get; set; } = string.Empty;
     public string CorrectAnswer { get; set; } = string.Empty;
     public bool IsCorrect { get; set; }
+    public int TimeUsedSeconds { get; set; }
+    public int SpeedBonus { get; set; }
     public string? Analysis { get; set; }
 }
 
@@ -227,6 +229,34 @@ public class GrammarDetailDto : GrammarDto
 }
 
 /// <summary>
+/// 情景对话条目
+/// </summary>
+public class SceneDialogue
+{
+    public string Speaker { get; set; } = string.Empty;
+    public string Text { get; set; } = string.Empty;
+}
+
+/// <summary>
+/// 情景学习场景 DTO
+/// </summary>
+public class SceneDto
+{
+    public string Title { get; set; } = string.Empty;
+    public string Image { get; set; } = string.Empty;
+    public List<SceneDialogue> Dialogue { get; set; } = new();
+    public string GrammarPoint { get; set; } = string.Empty;
+}
+
+/// <summary>
+/// 情景学习内容 DTO（添加到 GrammarDetailDto 的扩展）
+/// </summary>
+public class GrammarDetailWithScenesDto : GrammarDetailDto
+{
+    public List<SceneDto>? Scenes { get; set; }
+}
+
+/// <summary>
 /// 测验答案请求
 /// </summary>
 public class QuizAnswerRequest
@@ -260,6 +290,10 @@ public class DailyChallengeDto
     public int Score { get; set; }
     public int PointsEarned { get; set; }
     public int CoinsEarned { get; set; }
+    public string Theme { get; set; } = "mixed";
+    public string ThemeName { get; set; } = "综合日";
+    public string ThemeIcon { get; set; } = "🎯";
+    public int BonusMultiplier { get; set; } = 1;
 }
 
 /// <summary>
@@ -315,6 +349,43 @@ public class GradeTreeNode
 {
     public int Grade { get; set; }
     public string Label { get; set; } = string.Empty;
-    public string Semester { get; set; } = string.Empty;
     public List<GradeUnitTreeNode> Units { get; set; } = new();
+}
+
+/// <summary>
+/// 语法知识树节点 DTO
+/// </summary>
+public class GrammarTreeNode
+{
+    public Guid Id { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;
+    public int Level { get; set; }
+    public string Category { get; set; } = string.Empty;
+    public string Status { get; set; } = "locked"; // locked, available, completed, learning
+    public Guid? PrerequisiteId { get; set; }
+    public List<GrammarTreeNode> Children { get; set; } = new();
+}
+
+/// <summary>
+/// 单词复习 DTO（艾宾浩斯智能复习）
+/// </summary>
+public class WordReviewDto
+{
+    public Guid Id { get; set; }
+    public string WordText { get; set; } = string.Empty;
+    public string MeaningCn { get; set; } = string.Empty;
+    public int ReviewCount { get; set; }
+    public DateTime NextReviewAt { get; set; }
+    public bool IsUrgent { get; set; } // 24 小时内到期
+}
+
+/// <summary>
+/// 复习计划 DTO（一周复习计划）
+/// </summary>
+public class ReviewScheduleDto
+{
+    public DateTime Date { get; set; }
+    public int WordCount { get; set; }
+    public List<string> PreviewWords { get; set; } = new();
 }

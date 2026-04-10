@@ -2,7 +2,6 @@ using EnglishLearning.Domain.DTOs;
 using EnglishLearning.Domain.Entities;
 using EnglishLearning.Domain.Interfaces;
 using EnglishLearning.Infrastructure.Data;
-using EnglishLearning.Shared.Constants;
 using EnglishLearning.Shared.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +12,9 @@ namespace EnglishLearning.Infrastructure.Services;
 /// </summary>
 public class QuestionService : IQuestionService
 {
+    private const int PointsPerCorrectAnswer = 5;
+    private const int ExpPerCorrectAnswer = 2;
+
     private readonly AppDbContext _context;
     private readonly IPointsService _pointsService;
     private readonly IWrongQuestionService _wrongQuestionService;
@@ -30,11 +32,11 @@ public class QuestionService : IQuestionService
     /// <summary>
     /// 获取题目详情
     /// </summary>
-    public async Task<QuestionDetailResponse?> GetQuestionByIdAsync(Guid questionId)
+    public async Task<QuestionDetailResponse?> GetQuestionByIdAsync(Guid questionId, CancellationToken cancellationToken = default)
     {
         var question = await _context.Questions
             .Include(q => q.Options)
-            .FirstOrDefaultAsync(q => q.Id == questionId);
+            .FirstOrDefaultAsync(q => q.Id == questionId, cancellationToken);
 
         if (question == null || !question.IsActive)
         {
@@ -64,10 +66,10 @@ public class QuestionService : IQuestionService
     /// <summary>
     /// 提交答案
     /// </summary>
-    public async Task<AnswerResultResponse> SubmitAnswerAsync(Guid questionId, Guid userId, string userAnswer, int timeUsedSeconds)
+    public async Task<AnswerResultResponse> SubmitAnswerAsync(Guid questionId, Guid userId, string? userAnswer, int timeUsedSeconds, CancellationToken cancellationToken = default)
     {
         var question = await _context.Questions
-            .FirstOrDefaultAsync(q => q.Id == questionId);
+            .FirstOrDefaultAsync(q => q.Id == questionId, cancellationToken);
 
         if (question == null || !question.IsActive)
         {
@@ -86,14 +88,14 @@ public class QuestionService : IQuestionService
         }
 
         // 记录错题
-        if (!isCorrect)
+        if (!isCorrect && !string.IsNullOrEmpty(userAnswer))
         {
             await _wrongQuestionService.AddAsync(userId, questionId, userAnswer, question.CorrectAnswer);
         }
 
         // 计算奖励
-        int pointsEarned = isCorrect ? 5 : 0;
-        int expEarned = isCorrect ? 2 : 0;
+        int pointsEarned = isCorrect ? PointsPerCorrectAnswer : 0;
+        int expEarned = isCorrect ? ExpPerCorrectAnswer : 0;
         bool levelUp = false;
 
         if (pointsEarned > 0)
@@ -116,10 +118,10 @@ public class QuestionService : IQuestionService
     /// <summary>
     /// 获取挑战题目（智能组卷）
     /// </summary>
-    public async Task<List<QuestionDetailResponse>> GetQuestionsForChallengeAsync(Guid userId, int count = 10)
+    public async Task<List<QuestionDetailResponse>> GetQuestionsForChallengeAsync(Guid userId, int count = 10, CancellationToken cancellationToken = default)
     {
         // 获取用户年级
-        var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId, cancellationToken);
         if (user == null)
         {
             throw new BusinessException("用户不存在", 404);
@@ -138,7 +140,7 @@ public class QuestionService : IQuestionService
             .OrderBy(wq => wq.NextReviewAt)
             .Take(wrongQuestionCount)
             .Select(wq => wq.Question)
-            .ToListAsync();
+            .ToListAsync(cancellationToken);
 
         selectedQuestions.AddRange(wrongQuestions);
 
@@ -146,7 +148,7 @@ public class QuestionService : IQuestionService
         var learnedQuestionIds = await _context.LearningProgresses
             .Where(lp => lp.UserId == userId && lp.ContentType == "question")
             .Select(lp => lp.ContentId)
-            .ToListAsync();
+            .ToListAsync(cancellationToken);
 
         var newQuestions = await _context.Questions
             .Include(q => q.Options)
@@ -156,7 +158,7 @@ public class QuestionService : IQuestionService
                        !selectedQuestions.Select(sq => sq.Id).Contains(q.Id))
             .OrderBy(q => Guid.NewGuid())
             .Take(newQuestionCount)
-            .ToListAsync();
+            .ToListAsync(cancellationToken);
 
         selectedQuestions.AddRange(newQuestions);
 
@@ -172,7 +174,7 @@ public class QuestionService : IQuestionService
                            !selectedQuestions.Select(sq => sq.Id).Contains(q.Id))
                 .OrderBy(q => Guid.NewGuid())
                 .Take(remainingCount)
-                .ToListAsync();
+                .ToListAsync(cancellationToken);
 
             selectedQuestions.AddRange(reviewQuestions);
         }
@@ -201,13 +203,13 @@ public class QuestionService : IQuestionService
     /// <summary>
     /// 批量获取题目详情
     /// </summary>
-    public async Task<List<QuestionDetailResponse>> GetQuestionDetailsAsync(List<Guid> questionIds)
+    public async Task<List<QuestionDetailResponse>> GetQuestionDetailsAsync(List<Guid> questionIds, CancellationToken cancellationToken = default)
     {
         var questions = await _context.Questions
             .Include(q => q.Options)
             .Where(q => questionIds.Contains(q.Id) && q.IsActive)
             .OrderBy(q => q.Id)
-            .ToListAsync();
+            .ToListAsync(cancellationToken);
 
         return questions.Select(q => new QuestionDetailResponse
         {

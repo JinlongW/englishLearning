@@ -1,0 +1,54 @@
+{
+  "$schema": "word-import-schema.json",
+  "description": "人教版小学英语单词表数据导入文件",
+  "version": "1.0",
+  "data": {
+    "gradeUnits": [
+      {
+        "grade": 3,
+        "semester": "上",
+        "unitNo": 1,
+        "unitName": "Unit 1 Hello!",
+        "words": [
+          { "word": "ruler", "phonetic_uk": "/ˈruːlə/", "phonetic_us": "/ˈruːlər/", "meaning_cn": "尺子", "part_of_speech": "n.", "example_en": "I have a ruler.", "example_cn": "我有一把尺子。" },
+          { "word": "pencil", "phonetic_uk": "/ˈpensl/", "phonetic_us": "/ˈpensl/", "meaning_cn": "铅笔", "part_of_speech": "n.", "example_en": "This is my pencil.", "example_cn": "这是我的铅笔。" },
+          { "word": "eraser", "phonetic_uk": "/ɪˈreɪzə/", "phonetic_us": "/ɪˈreɪsər/", "meaning_cn": "橡皮", "part_of_speech": "n.", "example_en": "Can I use your eraser?", "example_cn": "我可以用你的橡皮吗？" },
+          { "word": "crayon", "phonetic_uk": "/ˈkreɪən/", "phonetic_us": "/ˈkreɪən/", "meaning_cn": "蜡笔", "part_of_speech": "n.", "example_en": "She has a red crayon.", "example_cn": "她有一支红色的蜡笔。" },
+          { "word": "book", "phonetic_uk": "/bʊk/", "phonetic_us": "/bʊk/", "meaning_cn": "书", "part_of_speech": "n.", "example_en": "Open your book.", "example_cn": "打开你的书。" },
+          { "word": "pencil box", "phonetic_uk": "/ˈpensl bɒks/", "phonetic_us": "/ˈpensl bɑːks/", "meaning_cn": "铅笔盒", "part_of_speech": "n.", "example_en": "My pen is in the pencil box.", "example_cn": "我的钢笔在铅笔盒里。" },
+          { "word": "bag", "phonetic_uk": "/bæɡ/", "phonetic_us": "/bæɡ/", "meaning_cn": "书包", "part_of_speech": "n.", "example_en": "I put my books in the bag.", "example_cn": "我把书放进书包里。" }
+        ]
+      },
+      {
+        "grade": 3,
+        "semester": "上",
+        "unitNo": 2,
+        "unitName": "Unit 2 Look at Me",
+        "words": [
+          { "word": "head", "phonetic_uk": "/hed/", "phonetic_us": "/hed/", "meaning_cn": "头", "part_of_speech": "n.", "example_en": "Touch your head.", "example_cn": "摸摸你的头。" },
+          { "word": "face", "phonetic_uk": "/feɪs/", "phonetic_us": "/feɪs/", "meaning_cn": "脸", "part_of_speech": "n.", "example_en": "She has a round face.", "example_cn": "她有一张圆脸。" },
+          { "word": "nose", "phonetic_uk": "/nəʊz/", "phonetic_us": "/noʊz/", "meaning_cn": "鼻子", "part_of_speech": "n.", "example_en": "Point to your nose.", "example_cn": "指着你的鼻子。" },
+          { "word": "eye", "phonetic_uk": "/aɪ/", "phonetic_us": "/aɪ/", "meaning_cn": "眼睛", "part_of_speech": "n.", "example_en": "I have two eyes.", "example_cn": "我有两只眼睛。" },
+          { "word": "ear", "phonetic_uk": "/ɪə/", "phonetic_us": "/ɪr/", "meaning_cn": "耳朵", "part_of_speech": "n.", "example_en": "Cover your ears.", "example_cn": "捂住你的耳朵。" },
+          { "word": "mouth", "phonetic_uk": "/maʊθ/", "phonetic_us": "/maʊθ/", "meaning_cn": "嘴巴", "part_of_speech": "n.", "example_en": "Open your mouth.", "example_cn": "张开你的嘴巴。" },
+          { "word": "arm", "phonetic_uk": "/ɑːm/", "phonetic_us": "/ɑːrm/", "meaning_cn": "胳膊", "part_of_speech": "n.", "example_en": "Raise your arm.", "example_cn": "举起你的胳膊。" },
+          { "word": "hand", "phonetic_uk": "/hænd/", "phonetic_us": "/hænd/", "meaning_cn": "手", "part_of_speech": "n.", "example_en": "Clap your hands.", "example_cn": "拍拍你的手。" },
+          { "word": "leg", "phonetic_uk": "/leɡ/", "phonetic_us": "/leɡ/", "meaning_cn": "腿", "part_of_speech": "n.", "example_en": "Stamp your foot.", "example_cn": "跺跺你的脚。" },
+          { "word": "foot", "phonetic_uk": "/fʊt/", "phonetic_us": "/fʊt/", "meaning_cn": "脚", "part_of_speech": "n.", "example_en": "My foot hurts.", "example_cn": "我的脚疼。" }
+        ]
+      }
+    ]
+  },
+  "_instructions": {
+    "step1": "从人教社官网 (https://www.pep.com.cn/) 或教育资源平台下载电子课本单词表",
+    "step2": "按单元整理单词数据，包括：单词、音标、中文意思、词性、例句",
+    "step3": "将数据按上述 JSON 格式填充到本文件的 data.gradeUnits 数组中",
+    "step4": "运行导入工具：dotnet run --project EnglishLearning.Seeder",
+    "note": "可以使用 Excel 等工具辅助整理数据，然后转换为 JSON 格式"
+  },
+  "_officialResources": [
+    { "name": "人民教育出版社", "url": "https://www.pep.com.cn/" },
+    { "name": "人教社数字教材", "url": "https://jczx.pep.com.cn/" },
+    { "name": "国家中小学智慧教育平台", "url": "https://www.zxx.edu.cn/" }
+  ]
+}

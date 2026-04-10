@@ -1,0 +1,39 @@
+## Solution
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files
+appsettings.Development.json
+appsettings.Local.json
+*.user
+applocals.json
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options
+.vs/
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Secrets (DO NOT COMMIT)
+*.pfx
+*.pem
+*.key
+.env
+appsettings.Production.json

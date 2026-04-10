@@ -1,0 +1,93 @@
+# 续 import-all-questions.py 文件 - 4-6 年级数据
+
+# ========== 四年级上册 ==========
+GRADE4_VOL1 = {
+    1: [
+        {"type": "single_choice", "difficulty": 1, "stem": "We study in the ______ (教室).", "answer": "A", "analysis": "classroom 是教室的意思。", "knowledge_point": "教室物品", "tags": "vocabulary", "options": [{"key": "A", "text": "classroom"}, {"key": "B", "text": "window"}, {"key": "C", "text": "door"}, {"key": "D", "text": "light"}]},
+        {"type": "single_choice", "difficulty": 2, "stem": "— ______ is in the classroom?\n— A blackboard.", "answer": "A", "analysis": "What's 用于询问有什么。", "knowledge_point": "特殊疑问句", "tags": "grammar", "options": [{"key": "A", "text": "What's"}, {"key": "B", "text": "Where's"}, {"key": "C", "text": "Who's"}, {"key": "D", "text": "How's"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "There ______ a computer in my classroom.", "answer": "is", "analysis": "There be 句型，单数用 is。", "knowledge_point": "There be 句型", "tags": "grammar"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— Let's clean the classroom!\n— _____________", "answer": "A", "analysis": "Good idea! 表示同意。", "knowledge_point": "建议句型", "tags": "dialogue", "options": [{"key": "A", "text": "Good idea!"}, {"key": "B", "text": "Thank you!"}, {"key": "C", "text": "Bye!"}, {"key": "D", "text": "Sorry!"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "Open the ______ (门), please.", "answer": "A", "analysis": "door 是门的意思。", "knowledge_point": "教室物品", "tags": "vocabulary", "options": [{"key": "A", "text": "door"}, {"key": "B", "text": "window"}, {"key": "C", "text": "blackboard"}, {"key": "D", "text": "picture"}]},
+    ],
+    2: [
+        {"type": "single_choice", "difficulty": 1, "stem": "I have a new ______ (书包).", "answer": "A", "analysis": "schoolbag 是书包的意思。", "knowledge_point": "学习用品", "tags": "vocabulary", "options": [{"key": "A", "text": "schoolbag"}, {"key": "B", "text": "bag"}, {"key": "C", "text": "book"}, {"key": "D", "text": "pen"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "— What's in your schoolbag?\n— Three ______ (故事书).", "answer": "A", "analysis": "storybook 的复数是 storybooks。", "knowledge_point": "名词复数", "tags": "vocabulary", "options": [{"key": "A", "text": "storybooks"}, {"key": "B", "text": "storybook"}, {"key": "C", "text": "story"}, {"key": "D", "text": "books"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "Put your ______ (数学书) in your desk.", "answer": "math book", "analysis": "数学书的英文是 math book。", "knowledge_point": "学习用品", "tags": "spelling"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— Is this your pen?\n— No, it ______.", "answer": "B", "analysis": "否定回答用 isn't。", "knowledge_point": "一般疑问句", "tags": "grammar", "options": [{"key": "A", "text": "is"}, {"key": "B", "text": "isn't"}, {"key": "C", "text": "does"}, {"key": "D", "text": "don't"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "I have an ______ (英语书).", "answer": "A", "analysis": "English book 是英语书的意思。", "knowledge_point": "学习用品", "tags": "vocabulary", "options": [{"key": "A", "text": "English book"}, {"key": "B", "text": "math book"}, {"key": "C", "text": "Chinese book"}, {"key": "D", "text": "story book"}]},
+    ],
+    3: [
+        {"type": "single_choice", "difficulty": 1, "stem": "He is tall and ______ (强壮的).", "answer": "A", "analysis": "strong 是强壮的意思。", "knowledge_point": "描述人物", "tags": "vocabulary", "options": [{"key": "A", "text": "strong"}, {"key": "B", "text": "thin"}, {"key": "C", "text": "short"}, {"key": "D", "text": "small"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "She has ______ (长的) hair.", "answer": "A", "analysis": "long 是长的意思。", "knowledge_point": "描述人物", "tags": "vocabulary", "options": [{"key": "A", "text": "long"}, {"key": "B", "text": "short"}, {"key": "C", "text": "big"}, {"key": "D", "text": "small"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "My friend is very ______ (友好的).", "answer": "friendly", "analysis": "友好的英文是 friendly。", "knowledge_point": "描述人物", "tags": "spelling"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— What's his name?\n— ______ name is Zhang Peng.", "answer": "A", "analysis": "他的名字用 His name。", "knowledge_point": "物主代词", "tags": "grammar", "options": [{"key": "A", "text": "His"}, {"key": "B", "text": "Her"}, {"key": "C", "text": "Its"}, {"key": "D", "text": "He's"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "— A boy or ______ (女孩)?\n— A boy.", "answer": "C", "analysis": "girl 是女孩的意思。", "knowledge_point": "人物称呼", "tags": "vocabulary", "options": [{"key": "A", "text": "boy"}, {"key": "B", "text": "man"}, {"key": "C", "text": "girl"}, {"key": "D", "text": "woman"}]},
+    ],
+    4: [
+        {"type": "single_choice", "difficulty": 1, "stem": "— Is she in the ______ (卧室)?\n— Yes, she is.", "answer": "A", "analysis": "bedroom 是卧室的意思。", "knowledge_point": "房间词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "bedroom"}, {"key": "B", "text": "living room"}, {"key": "C", "text": "kitchen"}, {"key": "D", "text": "bathroom"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "Go to the ______ (客厅). Watch TV.", "answer": "B", "analysis": "living room 是客厅的意思。", "knowledge_point": "房间词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "bedroom"}, {"key": "B", "text": "living room"}, {"key": "C", "text": "kitchen"}, {"key": "D", "text": "study"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "Take a shower in the ______ (浴室).", "answer": "bathroom", "analysis": "浴室的英文是 bathroom。", "knowledge_point": "房间词汇", "tags": "spelling"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— Are they on the table?\n— Yes, ______ are.", "answer": "A", "analysis": "肯定回答用 they are。", "knowledge_point": "一般疑问句", "tags": "grammar", "options": [{"key": "A", "text": "they"}, {"key": "B", "text": "there"}, {"key": "C", "text": "it"}, {"key": "D", "text": "we"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "I can see a sofa in the ______ (家).", "answer": "A", "analysis": "home 是家的意思。", "knowledge_point": "地点词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "home"}, {"key": "B", "text": "school"}, {"key": "C", "text": "park"}, {"key": "D", "text": "shop"}]},
+    ],
+    5: [
+        {"type": "single_choice", "difficulty": 1, "stem": "What's ______ (晚餐) ready?", "answer": "A", "analysis": "dinner 是晚餐的意思。", "knowledge_point": "食物词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "dinner"}, {"key": "B", "text": "lunch"}, {"key": "C", "text": "breakfast"}, {"key": "D", "text": "meal"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "I'd like some ______ (牛肉), please.", "answer": "A", "analysis": "beef 是牛肉的意思。", "knowledge_point": "食物词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "beef"}, {"key": "B", "text": "chicken"}, {"key": "C", "text": "fish"}, {"key": "D", "text": "pork"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "Pass me a ______ (盘子), please.", "answer": "plate", "analysis": "盘子的英文是 plate。", "knowledge_point": "餐具词汇", "tags": "spelling"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— What would you like?\n— I'd like some ______ (汤).", "answer": "A", "analysis": "soup 是汤的意思。", "knowledge_point": "食物词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "soup"}, {"key": "B", "text": "water"}, {"key": "C", "text": "juice"}, {"key": "D", "text": "milk"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "Use the ______ (筷子) to eat rice.", "answer": "C", "analysis": "chopsticks 是筷子的意思。", "knowledge_point": "餐具词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "knife"}, {"key": "B", "text": "fork"}, {"key": "C", "text": "chopsticks"}, {"key": "D", "text": "spoon"}]},
+    ],
+    6: [
+        {"type": "single_choice", "difficulty": 1, "stem": "My family has six ______ (人).", "answer": "A", "analysis": "people 是人的意思，单复数同形。", "knowledge_point": "家庭成员", "tags": "vocabulary", "options": [{"key": "A", "text": "people"}, {"key": "B", "text": "person"}, {"key": "C", "text": "man"}, {"key": "D", "text": "woman"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "— Is this your ______ (叔叔)?\n— Yes, it is.", "answer": "A", "analysis": "uncle 是叔叔的意思。", "knowledge_point": "家庭成员", "tags": "vocabulary", "options": [{"key": "A", "text": "uncle"}, {"key": "B", "text": "aunt"}, {"key": "C", "text": "cousin"}, {"key": "D", "text": "grandpa"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "My ______ (表妹) is a student.", "answer": "cousin", "analysis": "表妹/堂妹的英文是 cousin。", "knowledge_point": "家庭成员", "tags": "spelling"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— How many people are there in your family?\n— ______.", "answer": "A", "analysis": "询问家庭人口数量的回答。", "knowledge_point": "数量问答", "tags": "dialogue", "options": [{"key": "A", "text": "Three"}, {"key": "B", "text": "Three years old"}, {"key": "C", "text": "Three o'clock"}, {"key": "D", "text": "Three meters"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "My ______ (父母) love me.", "answer": "A", "analysis": "parents 是父母的意思。", "knowledge_point": "家庭成员", "tags": "vocabulary", "options": [{"key": "A", "text": "parents"}, {"key": "B", "text": "parent"}, {"key": "C", "text": "father"}, {"key": "D", "text": "mother"}]},
+    ],
+}
+
+# ========== 四年级下册 ==========
+GRADE4_VOL2 = {
+    1: [
+        {"type": "single_choice", "difficulty": 1, "stem": "— Where is the ______ (图书馆)?\n— It's on the first floor.", "answer": "A", "analysis": "library 是图书馆的意思。", "knowledge_point": "地点词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "library"}, {"key": "B", "text": "classroom"}, {"key": "C", "text": "office"}, {"key": "D", "text": "hall"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "The teachers' ______ (办公室) is big.", "answer": "A", "analysis": "office 是办公室的意思。", "knowledge_point": "地点词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "office"}, {"key": "B", "text": "classroom"}, {"key": "C", "text": "library"}, {"key": "D", "text": "gate"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "Welcome to our ______ (学校)!", "answer": "school", "analysis": "学校的英文是 school。", "knowledge_point": "地点词汇", "tags": "spelling"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— Is this the teachers' office?\n— No, it ______.", "answer": "B", "analysis": "否定回答用 isn't。", "knowledge_point": "一般疑问句", "tags": "grammar", "options": [{"key": "A", "text": "is"}, {"key": "B", "text": "isn't"}, {"key": "C", "text": "doesn't"}, {"key": "D", "text": "don't"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "It's ______ (在...旁边) the office.", "answer": "A", "analysis": "next to 是在...旁边的意思。", "knowledge_point": "方位介词", "tags": "vocabulary", "options": [{"key": "A", "text": "next to"}, {"key": "B", "text": "next"}, {"key": "C", "text": "near to"}, {"key": "D", "text": "near of"}]},
+    ],
+    2: [
+        {"type": "single_choice", "difficulty": 1, "stem": "— What time is it?\n— It's ______ (九点) o'clock.", "answer": "A", "analysis": "nine 是九的意思。", "knowledge_point": "时间表达", "tags": "vocabulary", "options": [{"key": "A", "text": "nine"}, {"key": "B", "text": "eight"}, {"key": "C", "text": "seven"}, {"key": "D", "text": "six"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "It's time ______ (该) get up.", "answer": "A", "analysis": "It's time to... 表示该做...了。", "knowledge_point": "时间句型", "tags": "grammar", "options": [{"key": "A", "text": "to"}, {"key": "B", "text": "for"}, {"key": "C", "text": "of"}, {"key": "D", "text": "at"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "It's time for ______ (早餐).", "answer": "breakfast", "analysis": "早餐的英文是 breakfast。", "knowledge_point": "食物词汇", "tags": "spelling"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— It's 12 o'clock.\n— It's time for ______ (午餐).", "answer": "A", "analysis": "lunch 是午餐的意思。", "knowledge_point": "食物词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "lunch"}, {"key": "B", "text": "dinner"}, {"key": "C", "text": "breakfast"}, {"key": "D", "text": "meal"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "Hurry ______! It's time to go.", "answer": "A", "analysis": "Hurry up! 表示快点。", "knowledge_point": "日常交际", "tags": "dialogue", "options": [{"key": "A", "text": "up"}, {"key": "B", "text": "on"}, {"key": "C", "text": "in"}, {"key": "D", "text": "at"}]},
+    ],
+    3: [
+        {"type": "single_choice", "difficulty": 1, "stem": "It's ______ (晴朗的) today.", "answer": "A", "analysis": "sunny 是晴朗的意思。", "knowledge_point": "天气词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "sunny"}, {"key": "B", "text": "rainy"}, {"key": "C", "text": "cloudy"}, {"key": "D", "text": "windy"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "It's ______ (多雨的). Take an umbrella.", "answer": "B", "analysis": "rainy 是多雨的意思。", "knowledge_point": "天气词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "sunny"}, {"key": "B", "text": "rainy"}, {"key": "C", "text": "snowy"}, {"key": "D", "text": "windy"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "It's ______ (多云的) today.", "answer": "cloudy", "analysis": "多云的英文是 cloudy。", "knowledge_point": "天气词汇", "tags": "spelling"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— Can I go outside now?\n— No. It's ______ (冷的) outside.", "answer": "A", "analysis": "cold 是冷的意思。", "knowledge_point": "天气词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "cold"}, {"key": "B", "text": "hot"}, {"key": "C", "text": "warm"}, {"key": "D", "text": "cool"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "The weather is ______ (温暖的).", "answer": "A", "analysis": "warm 是温暖的意思。", "knowledge_point": "天气词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "warm"}, {"key": "B", "text": "cold"}, {"key": "C", "text": "cool"}, {"key": "D", "text": "hot"}]},
+    ],
+    4: [
+        {"type": "single_choice", "difficulty": 1, "stem": "Are these ______ (胡萝卜)?", "answer": "A", "analysis": "carrots 是胡萝卜的复数形式。", "knowledge_point": "蔬菜词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "carrots"}, {"key": "B", "text": "potatoes"}, {"key": "C", "text": "tomatoes"}, {"key": "D", "text": "onions"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "Those are ______ (马铃薯).", "answer": "A", "analysis": "potatoes 是马铃薯的复数形式。", "knowledge_point": "蔬菜词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "potatoes"}, {"key": "B", "text": "tomatoes"}, {"key": "C", "text": "carrots"}, {"key": "D", "text": "beans"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "Look at the ______ (西红柿). They are red.", "answer": "tomatoes", "analysis": "西红柿的英文是 tomato，复数是 tomatoes。", "knowledge_point": "蔬菜词汇", "tags": "spelling"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— Are those sheep?\n— No, they ______.", "answer": "B", "analysis": "否定回答用 aren't。", "knowledge_point": "一般疑问句", "tags": "grammar", "options": [{"key": "A", "text": "are"}, {"key": "B", "text": "aren't"}, {"key": "C", "text": "isn't"}, {"key": "D", "text": "don't"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "I can see many ______ (马) on the farm.", "answer": "A", "analysis": "horse 的复数是 horses。", "knowledge_point": "动物词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "horses"}, {"key": "B", "text": "horse"}, {"key": "C", "text": "sheep"}, {"key": "D", "text": "cow"}]},
+    ],
+    5: [
+        {"type": "single_choice", "difficulty": 1, "stem": "These are my ______ (裤子).", "answer": "A", "analysis": "pants 是裤子的意思。", "knowledge_point": "衣物词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "pants"}, {"key": "B", "text": "shirt"}, {"key": "C", "text": "coat"}, {"key": "D", "text": "sweater"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "That's a ______ (连衣裙).", "answer": "A", "analysis": "dress 是连衣裙的意思。", "knowledge_point": "衣物词汇", "tags": "vocabulary", "options": [{"key": "A", "text": "dress"}, {"key": "B", "text": "skirt"}, {"key": "C", "text": "shirt"}, {"key": "D", "text": "coat"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "These are my ______ (短袜).", "answer": "socks", "analysis": "短袜的英文是 socks。", "knowledge_point": "衣物词汇", "tags": "spelling"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— ______ hat is this?\n— It's mine.", "answer": "A", "analysis": "Whose 用于询问是谁的。", "knowledge_point": "特殊疑问词", "tags": "grammar", "options": [{"key": "A", "text": "Whose"}, {"key": "B", "text": "Who's"}, {"key": "C", "text": "What's"}, {"key": "D", "text": "Where's"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "The shirt is too ______ (小的).", "answer": "A", "analysis": "small 是小的意思。", "knowledge_point": "形容词", "tags": "vocabulary", "options": [{"key": "A", "text": "small"}, {"key": "B", "text": "big"}, {"key": "C", "text": "long"}, {"key": "D", "text": "fat"}]},
+    ],
+    6: [
+        {"type": "single_choice", "difficulty": 1, "stem": "Can I help you? The shoes are very ______ (便宜的).", "answer": "A", "analysis": "cheap 是便宜的意思。", "knowledge_point": "购物用语", "tags": "vocabulary", "options": [{"key": "A", "text": "cheap"}, {"key": "B", "text": "expensive"}, {"key": "C", "text": "good"}, {"key": "D", "text": "nice"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "This skirt is too ______ (贵的).", "answer": "B", "analysis": "expensive 是贵的意思。", "knowledge_point": "购物用语", "tags": "vocabulary", "options": [{"key": "A", "text": "cheap"}, {"key": "B", "text": "expensive"}, {"key": "C", "text": "small"}, {"key": "D", "text": "big"}]},
+        {"type": "fill_blank", "difficulty": 2, "stem": "I'll take ______ (它们).", "answer": "them", "analysis": "它们的宾格形式是 them。", "knowledge_point": "人称代词", "tags": "spelling"},
+        {"type": "single_choice", "difficulty": 2, "stem": "— Can I try them on?\n— Yes. Of ______.", "answer": "A", "analysis": "Of course. 表示当然可以。", "knowledge_point": "购物用语", "tags": "dialogue", "options": [{"key": "A", "text": "course"}, {"key": "B", "text": "OK"}, {"key": "C", "text": "yes"}, {"key": "D", "text": "good"}]},
+        {"type": "single_choice", "difficulty": 1, "stem": "The size is ______ (正好).", "answer": "A", "analysis": "just right 表示正好。", "knowledge_point": "购物用语", "tags": "vocabulary", "options": [{"key": "A", "text": "just right"}, {"key": "B", "text": "too big"}, {"key": "C", "text": "too small"}, {"key": "D", "text": "OK"}]},
+    ],
+}
