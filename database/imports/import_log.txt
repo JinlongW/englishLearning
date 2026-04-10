@@ -1,0 +1,277 @@
+==================================================
+qwerty-learner 词库导入工具
+==================================================
+找到 36 个词典文件
+数据库连接成功
+
+处理文件：PEPChuZhong7_1_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：392
+  跳过：无法解析年级信息
+
+处理文件：PEPChuZhong7_2_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：492
+  跳过：无法解析年级信息
+
+处理文件：PEPChuZhong8_1_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：419
+  跳过：无法解析年级信息
+
+处理文件：PEPChuZhong8_2_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：466
+  跳过：无法解析年级信息
+
+处理文件：PEPChuZhong9_1_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：551
+  跳过：无法解析年级信息
+
+处理文件：PEPGaoZhong_10_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：361
+  跳过：无法解析年级信息
+
+处理文件：PEPGaoZhong_11_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：309
+  跳过：无法解析年级信息
+
+处理文件：PEPGaoZhong_1_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：311
+  跳过：无法解析年级信息
+
+处理文件：PEPGaoZhong_2_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：319
+  跳过：无法解析年级信息
+
+处理文件：PEPGaoZhong_3_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：366
+  跳过：无法解析年级信息
+
+处理文件：PEPGaoZhong_4_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：307
+  跳过：无法解析年级信息
+
+处理文件：PEPGaoZhong_5_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：357
+  跳过：无法解析年级信息
+
+处理文件：PEPGaoZhong_6_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：391
+  跳过：无法解析年级信息
+
+处理文件：PEPGaoZhong_7_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：384
+  跳过：无法解析年级信息
+
+处理文件：PEPGaoZhong_8_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：420
+  跳过：无法解析年级信息
+
+处理文件：PEPGaoZhong_9_T.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：352
+  跳过：无法解析年级信息
+
+处理文件：PEPXiaoXue3_1_T.json
+  教材信息：{'publisher': 'PEP', 'level': '小学', 'grade': '3', 'semester': '上', 'version': 'T'}
+  单词数量：64
+  处理单元 1: Unit 1 Hello! (1-11 词，共11个)
+  已导入 11 个单词
+  处理单元 2: Unit 2 Look at Me (12-22 词，共11个)
+  已导入 11 个单词
+  处理单元 3: Unit 3 Let's Paint (23-33 词，共11个)
+  已导入 11 个单词
+  处理单元 4: Unit 4 We Love Animals (34-44 词，共11个)
+  已导入 11 个单词
+  处理单元 5: Unit 5 Let's Eat (45-55 词，共11个)
+  已导入 11 个单词
+  处理单元 6: Unit 6 Happy Birthday (56-64 词，共9个)
+  已导入 9 个单词
+
+处理文件：PEPXiaoXue3_2_T.json
+  教材信息：{'publisher': 'PEP', 'level': '小学', 'grade': '3', 'semester': '下', 'version': 'T'}
+  单词数量：72
+  处理单元 1: Unit 1 Welcome Back to School (1-12 词，共12个)
+  已导入 12 个单词
+  处理单元 2: Unit 2 My Family (13-24 词，共12个)
+  已导入 12 个单词
+  处理单元 3: Unit 3 At the Zoo (25-36 词，共12个)
+  已导入 12 个单词
+  处理单元 4: Unit 4 Where Is My Car (37-48 词，共12个)
+  已导入 12 个单词
+  处理单元 5: Unit 5 Do You Like Pears (49-60 词，共12个)
+  已导入 12 个单词
+  处理单元 6: Unit 6 How Many (61-72 词，共12个)
+  已导入 12 个单词
+
+处理文件：PEPXiaoXue4_1_T.json
+  教材信息：{'publisher': 'PEP', 'level': '小学', 'grade': '4', 'semester': '上', 'version': 'T'}
+  单词数量：84
+  处理单元 1: Unit 1 My Classroom (1-14 词，共14个)
+  已导入 14 个单词
+  处理单元 2: Unit 2 My Schoolbag (15-28 词，共14个)
+  已导入 14 个单词
+  处理单元 3: Unit 3 My Friends (29-42 词，共14个)
+  已导入 14 个单词
+  处理单元 4: Unit 4 My Home (43-56 词，共14个)
+  已导入 14 个单词
+  处理单元 5: Unit 5 Dinner's Ready (57-70 词，共14个)
+  已导入 14 个单词
+  处理单元 6: Unit 6 Meet My Family (71-84 词，共14个)
+  已导入 14 个单词
+
+处理文件：PEPXiaoXue4_2_T.json
+  教材信息：{'publisher': 'PEP', 'level': '小学', 'grade': '4', 'semester': '下', 'version': 'T'}
+  单词数量：104
+  处理单元 1: Unit 1 (1-18 词，共18个)
+  已导入 18 个单词
+  处理单元 2: Unit 2 (19-36 词，共18个)
+  已导入 18 个单词
+  处理单元 3: Unit 3 (37-54 词，共18个)
+  已导入 18 个单词
+  处理单元 4: Unit 4 (55-72 词，共18个)
+  已导入 18 个单词
+  处理单元 5: Unit 5 (73-90 词，共18个)
+  已导入 18 个单词
+  处理单元 6: Unit 6 (91-104 词，共14个)
+  已导入 14 个单词
+
+处理文件：PEPXiaoXue5_1_T.json
+  教材信息：{'publisher': 'PEP', 'level': '小学', 'grade': '5', 'semester': '上', 'version': 'T'}
+  单词数量：131
+  处理单元 1: Unit 1 What's He Like (1-22 词，共22个)
+  已导入 22 个单词
+  处理单元 2: Unit 2 My Week (23-44 词，共22个)
+  已导入 22 个单词
+  处理单元 3: Unit 3 What Would You Like (45-66 词，共22个)
+  已导入 22 个单词
+  处理单元 4: Unit 4 (67-88 词，共22个)
+  已导入 22 个单词
+  处理单元 5: Unit 5 (89-110 词，共22个)
+  已导入 22 个单词
+  处理单元 6: Unit 6 (111-131 词，共21个)
+  已导入 21 个单词
+
+处理文件：PEPXiaoXue5_2_T.json
+  教材信息：{'publisher': 'PEP', 'level': '小学', 'grade': '5', 'semester': '下', 'version': 'T'}
+  单词数量：156
+  处理单元 1: Unit 1 (1-26 词，共26个)
+  已导入 26 个单词
+  处理单元 2: Unit 2 (27-52 词，共26个)
+  已导入 26 个单词
+  处理单元 3: Unit 3 (53-78 词，共26个)
+  已导入 26 个单词
+  处理单元 4: Unit 4 (79-104 词，共26个)
+  已导入 26 个单词
+  处理单元 5: Unit 5 (105-130 词，共26个)
+  已导入 26 个单词
+  处理单元 6: Unit 6 (131-156 词，共26个)
+  已导入 26 个单词
+
+处理文件：PEPXiaoXue6_1_T.json
+  教材信息：{'publisher': 'PEP', 'level': '小学', 'grade': '6', 'semester': '上', 'version': 'T'}
+  单词数量：130
+  处理单元 1: Unit 1 How Can I Get There (1-22 词，共22个)
+  已导入 22 个单词
+  处理单元 2: Unit 2 Ways to Go to School (23-44 词，共22个)
+  已导入 22 个单词
+  处理单元 3: Unit 3 My Weekend Plan (45-66 词，共22个)
+  已导入 22 个单词
+  处理单元 4: Unit 4 Then and Now (67-88 词，共22个)
+  已导入 22 个单词
+  处理单元 5: Unit 5 Occupations (89-110 词，共22个)
+  已导入 22 个单词
+  处理单元 6: Unit 6 How Do You Feel (111-130 词，共20个)
+  已导入 20 个单词
+
+处理文件：PEPXiaoXue6_2_T.json
+  教材信息：{'publisher': 'PEP', 'level': '小学', 'grade': '6', 'semester': '下', 'version': 'T'}
+  单词数量：108
+  处理单元 1: Unit 1 (1-18 词，共18个)
+  已导入 18 个单词
+  处理单元 2: Unit 2 (19-36 词，共18个)
+  已导入 18 个单词
+  处理单元 3: Unit 3 (37-54 词，共18个)
+  已导入 18 个单词
+  处理单元 4: Unit 4 (55-72 词，共18个)
+  已导入 18 个单词
+  处理单元 5: Unit 5 (73-90 词，共18个)
+  已导入 18 个单词
+  处理单元 6: Unit 6 (91-108 词，共18个)
+  已导入 18 个单词
+
+处理文件：PEP_SL_XiaoXue1_1_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：52
+  跳过：无法解析年级信息
+
+处理文件：PEP_SL_XiaoXue1_2_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：45
+  跳过：无法解析年级信息
+
+处理文件：PEP_SL_XiaoXue2_1_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：54
+  跳过：无法解析年级信息
+
+处理文件：PEP_SL_XiaoXue2_2_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：55
+  跳过：无法解析年级信息
+
+处理文件：PEP_SL_XiaoXue3_1_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：103
+  跳过：无法解析年级信息
+
+处理文件：PEP_SL_XiaoXue3_2_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：84
+  跳过：无法解析年级信息
+
+处理文件：PEP_SL_XiaoXue4_1_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：116
+  跳过：无法解析年级信息
+
+处理文件：PEP_SL_XiaoXue4_2_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：87
+  跳过：无法解析年级信息
+
+处理文件：PEP_SL_XiaoXue5_1_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：66
+  跳过：无法解析年级信息
+
+处理文件：PEP_SL_XiaoXue5_2_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：96
+  跳过：无法解析年级信息
+
+处理文件：PEP_SL_XiaoXue6_1_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：102
+  跳过：无法解析年级信息
+
+处理文件：PEP_SL_XiaoXue6_2_t.json
+  教材信息：{'publisher': '', 'level': '', 'grade': '', 'semester': '', 'version': ''}
+  单词数量：41
+  跳过：无法解析年级信息
+
+==================================================
+导入完成！
+==================================================

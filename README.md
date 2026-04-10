@@ -1,45 +1,50 @@
-# EnglishLearning.API
+# EnglishLearning
 
-英语学习工具后端 API - 基于 .NET 8 的单词学习、语法学习、每日挑战系统
+英语学习工具 - 基于 .NET 8 + Vue3 的单词学习、语法学习、每日挑战系统
 
 ## 项目概述
 
-基于 .NET 8 的英语学习工具后端 API，支持单词学习、语法学习、每日挑战、错题本等功能。
-
-## 技术栈
-
-- **框架**: ASP.NET Core 8.0 Web API
-- **数据库**: SQL Server 2016+
-- **ORM**: Entity Framework Core 8.0
-- **认证**: JWT Bearer Token
-- **日志**: Serilog
-- **验证**: FluentValidation
+完整的英语学习工具，包含后端 API、前端小程序和数据库脚本。支持单词学习、语法学习、每日挑战、错题本等功能。
 
 ## 项目结构
 
 ```
-EnglishLearning.API/
-├── Controllers/          # API 控制器
-├── Middleware/          # 中间件
-├── Extensions/          # 扩展方法
-└── Program.cs           # 入口文件
-
-EnglishLearning.Domain/
-├── Entities/            # 实体类
-├── Enums/               # 枚举
-├── Interfaces/          # 接口定义
-└── DTOs/                # 数据传输对象
-
-EnglishLearning.Infrastructure/
-├── Data/                # 数据访问层
-├── Services/            # 业务服务
-└── Extensions/          # 服务注册扩展
-
-EnglishLearning.Shared/
-├── Constants/           # 常量配置
-├── Exceptions/          # 自定义异常
-└── Utils/               # 工具类
+englishLearning/
+├── backend/                # 后端 .NET 8 Web API
+│   ├── EnglishLearning.API/
+│   ├── EnglishLearning.Domain/
+│   ├── EnglishLearning.Infrastructure/
+│   └── EnglishLearning.Shared/
+├── frontend/               # 前端 Vue3 + TypeScript 小程序
+│   ├── src/
+│   ├── e2e/
+│   └── package.json
+└── database/               # 数据库脚本和初始化数据
+    ├── database.sql        # 数据库结构
+    ├── init-data.sql       # 初始化数据
+    └── migrations/         # 数据库迁移
 ```
+
+## 技术栈
+
+### 后端
+- **框架**: ASP.NET Core 8.0 Web API
+- **数据库**: SQL Server 2016+
+- **ORM**: Entity Framework Core 8.0
+- **认证**: JWT Bearer Token
+- **验证**: FluentValidation
+
+### 前端
+- **框架**: Vue 3 + TypeScript
+- **构建工具**: Vite
+- **UI 组件**: Vant 4
+- **状态管理**: Pinia
+- **HTTP 客户端**: Axios
+- **测试**: Playwright
+
+### 数据库
+- **数据库**: SQL Server 2016+
+- **迁移工具**: EF Core Migrations
 
 ## 快速开始
 
