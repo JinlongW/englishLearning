@@ -164,8 +164,9 @@ public class WordService : IWordService
             progress.UpdatedAt = now;
             progress.CompletedAt = completedAt;
 
-            // 显式标记实体为已修改，确保变更被跟踪
-            _context.Entry(progress).State = EntityState.Modified;
+            // 注意：ExecuteSqlRawAsync 已经直接执行了 SQL UPDATE，不需要再调用 SaveChangesAsync
+            // 但需要清除 EF Core 的 change tracking，避免后续操作冲突
+            _context.Entry(progress).State = EntityState.Detached;
         }
 
         // 计算奖励

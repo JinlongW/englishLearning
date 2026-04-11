@@ -93,6 +93,7 @@ const onUnitChange = (unitId: string) => {
 const onGradeUnitLoaded = (unitId: string, count: number, totalCount: number) => {
   // 同步已学数量，确保顶部进度与单元卡片一致
   learnedCount.value = count
+  totalCount.value = totalCount
 }
 
 const loadWords = async () => {
@@ -116,6 +117,9 @@ const loadWords = async () => {
     console.log('加载完成，words 数量:', words.value.length, 'total:', totalCount.value)
     // 计算已学数量：状态为 completed 或 mastered 的单词
     learnedCount.value = words.value.filter(w => w.status === 'completed' || w.status === 'mastered').length
+
+    // 加载完成后同步单元进度显示
+    gradeUnitSelectorRef.value?.refresh()
   } catch (error) {
     console.error('加载单词失败', error)
     const errorMessage = error instanceof Error ? error.message : String(error)
